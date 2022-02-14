@@ -1,0 +1,28 @@
+ $borderColor: #8C8C8C;
+ $primaryColor: #6b717f;
+ 
+
+ @mixin infos($background) {
+    border: 1px solid $borderColor;
+    padding: 16px;
+    color: #fff;
+    background-color: $background;
+ }
+
+ @mixin padding($padding){
+    @if $padding == 1{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }@else if $padding == 2{
+        padding: 16px * 2;
+    } @else if $padding == 3{
+        padding: 16px;
+    }
+}
+
+@mixin shadow($shadoColor){
+    -webkit-box-shadow: 10px 10px 15px -4px  $shadoColor;
+    -moz-box-shadow: 10px 10px 15px -4px  $shadoColor;
+    box-shadow: 10px 10px 15px -4px  $shadoColor;
+    
+}
